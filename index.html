@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo</title>
     <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #fff;
+            --background-color: #f0f0f0;
+            --max-width: 800px;
+        }
+
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: var(--background-color);
             margin: 0;
             padding: 0;
             display: flex;
@@ -19,11 +26,13 @@
         }
 
         #header {
-            background-color: #333;
-            color: #fff;
-            width: 100%;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            width: 80%;
+            max-width: var(--max-width);
             padding: 20px;
             box-sizing: border-box;
+            border-radius: 10px 10px 0 0;
         }
 
         #profile-image {
@@ -34,11 +43,11 @@
 
         #main-content {
             padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
+            background-color: var(--secondary-color);
+            border-radius: 0 0 10px 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 80%;
-            max-width: 800px;
+            max-width: var(--max-width);
         }
 
         h1, h2 {
@@ -47,6 +56,16 @@
 
         p {
             margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            #header, #main-content {
+                width: 100%;
+            }
         }
     </style>
 </head>
